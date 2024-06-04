@@ -1,4 +1,5 @@
 body {
+	padding-top: 4rem;
 	margin: 0;
 	color: #6a6f8c;
 	background: #c8c8c8;
@@ -28,12 +29,14 @@ a {
 }
 
 .login-wrap {
+	border-radius: 4rem;
 	width: 100%;
 	margin: auto;
 	max-width: 525px;
 	min-height: 670px;
 	position: relative;
-	background: url(images/anillo.jpg) no-repeat center;
+	background: url(images/xv.jpg) no-repeat center;
+	background-size: auto;
 	box-shadow: 0 12px 15px 0 rgba(0, 0, 0, .24), 0 17px 50px 0 rgba(0, 0, 0, .19);
 }
 
@@ -44,7 +47,7 @@ a {
 		max-width: 90%;
 		min-height: 620px;
 		position: relative;
-		background: url(images/anillo.jpg) no-repeat center;
+		background: url(images/xv.jpg) no-repeat center;
 		box-shadow: 0 12px 15px 0 rgba(0, 0, 0, .24), 0 17px 50px 0 rgba(0, 0, 0, .19);
 	}
 }

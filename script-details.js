@@ -3,7 +3,7 @@ const urlParams = new URLSearchParams(window.location.search);
 const invitadoNombre = urlParams.get("invitado");
 
 // Cargar el archivo JSON de invitados
-fetch("../invitados.json")
+fetch("https://renzo971.github.io/xvanos/invitados.json")
   .then((response) => response.json())
   .then((data) => {
     const detallesContainer = document.getElementById("detalles");
@@ -13,9 +13,8 @@ fetch("../invitados.json")
       const detallesDiv = document.createElement("div");
       detallesDiv.className = "invitado-details-card";
       detallesDiv.innerHTML = `
-      <p>Es un placer que puedas acompañarme en este dia tan especial para mi</p>
+      <p>Es un placer que puedas acompañarme en este dia tan especial para mi y disfrutar de este momento juntos</p>
         <h3>${invitado.nombre}</h3>
-        <p>Pase para: ${parseInt(invitado.acompañantes) + 1} persona</p>
       `;
       detallesContainer.appendChild(detallesDiv);
       const form = document.querySelector("#confir");

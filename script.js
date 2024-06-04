@@ -3,7 +3,7 @@ const suggestionsContainer = document.getElementById("suggestions");
 const invitadosContainer = document.getElementById("invitados");
 
 // Cargar el archivo JSON de invitados
-fetch("../invitados.json")
+fetch("https://renzo971.github.io/xvanos/invitados.json")
   .then((response) => response.json())
   .then((data) => {
     const invitados = data;
@@ -15,14 +15,8 @@ fetch("../invitados.json")
       0
     );
 
-    // Mostrar el resultado en la consola
-    console.log(`El total de acompañantes es: ${totalAcompanantes}`);
+    // Mostrar el resultado en la consola}
     console.log(`El total de Invitados es ${invitados.length}`);
-    console.log(
-      `El total Completo de Invitados es ${
-        invitados.length + totalAcompanantes
-      }`
-    );
 
     // Función para mostrar sugerencias en tiempo real
     function showSuggestions(searchTerm) {
@@ -84,10 +78,6 @@ fetch("../invitados.json")
         <div class="card-header text-center">Invitacion</div>
         <div class="card-body">
           <h5 class="card-title text-center">${invitado.nombre}</h5>
-          <p class="card-text text-center">
-            Pase para: ${parseInt(invitado.acompañantes) + 1} personas<br> 
-            <span style="color: red;">Los niños menores de 9 años no necesitan pase de acompañante</span>
-          </p>
           <a class="btn btn-primary mb-3" href="home.html?invitado=${encodeURIComponent(
             invitado.nombre
           )}">Ver invitacion</a>
