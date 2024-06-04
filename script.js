@@ -2,9 +2,8 @@ const searchInput = document.getElementById("searchInput");
 const suggestionsContainer = document.getElementById("suggestions");
 const invitadosContainer = document.getElementById("invitados");
 
-
 // Cargar el archivo JSON de invitados
-fetch("https://damp-wall-production.up.railway.app/api/guests")
+fetch("../invitados.json")
   .then((response) => response.json())
   .then((data) => {
     const invitados = data;
@@ -138,11 +137,11 @@ form.addEventListener("submit", function (event) {
     .then((response) => response.json())
     .then((data) => {
       console.log(data);
-      name.value = ''
-      email.value = ''
-      events.value = ''
-      message.value = ''
-      alert(data.msg)
+      name.value = "";
+      email.value = "";
+      events.value = "";
+      message.value = "";
+      alert(data.msg);
     })
     .catch((error) => {
       console.log(error);
